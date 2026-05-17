@@ -192,8 +192,6 @@ class ConfigManager:
                 os.getcwd(),  # 当前工作目录
                 os.path.dirname(os.path.abspath(__file__)),  # 脚本所在目录
                 os.path.join(os.getcwd(), "自动打印监控文件夹"),  # 当前目录下的标准文件夹
-                "D:/自动打印监控文件夹",  # 原始配置路径
-                "C:/自动打印监控文件夹"   # 备用路径
             ]
             
             for path in possible_paths:

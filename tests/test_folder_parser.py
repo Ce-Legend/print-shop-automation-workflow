@@ -66,3 +66,30 @@ def test_parse_panorama_mode():
     assert info.size == "6寸"
     assert info.mode == "全景"
     assert info.count == 8
+
+
+def test_parse_chinese_size_alias():
+    info = FolderNameParser.parse("五寸拍立得,12张 250704-123456789012348")
+
+    assert info.size == "5寸"
+    assert info.mode == "拍立得"
+    assert info.count == 12
+    assert info.order_id == "250704-123456789012348"
+
+
+def test_missing_count_keeps_core_order_info():
+    info = FolderNameParser.parse("【拍立得】5寸 250701-123456789012345")
+
+    assert info.size == "5寸"
+    assert info.mode == "拍立得"
+    assert info.count is None
+    assert info.order_id == "250701-123456789012345"
+
+
+def test_invalid_folder_name_has_no_core_fields():
+    info = FolderNameParser.parse("临时照片")
+
+    assert info.size is None
+    assert info.mode is None
+    assert info.count is None
+    assert info.order_id is None
