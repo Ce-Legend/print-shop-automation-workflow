@@ -1,0 +1,21 @@
+[project]
+name = "print-shop-automation-workflow"
+version = "0.1.0"
+description = "Windows print-shop automation workflow for folder monitoring, photo preprocessing, task dispatching, and printer presets."
+requires-python = ">=3.10"
+dependencies = [
+  "Pillow>=10.0.0",
+  "python-barcode>=0.15.1",
+  "watchdog>=3.0.0",
+  "pywin32>=306; platform_system == 'Windows'",
+  "pyttsx3>=2.90",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

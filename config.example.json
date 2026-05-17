@@ -1,0 +1,61 @@
+{
+    "monitor_path": "",
+    "exception_folder": "异常文件夹",
+    "wait_time": 60,
+    "enable_preprocessing": true,
+    "debug_mode": false,
+    "create_virtual_printers": false,
+    "printers": {
+        "Microsoft Print to PDF": {
+            "enabled": true,
+            "printer_id": 1,
+            "paper_size": "6寸",
+            "modes": [
+                "拍立得"
+            ]
+        },
+        "Photo Printer 1": {
+            "enabled": false,
+            "printer_id": 2,
+            "paper_size": "5寸",
+            "modes": [
+                "拍立得",
+                "全景"
+            ]
+        }
+    },
+    "presets": {
+        "3寸": {
+            "default": "5寸拍立得"
+        },
+        "三寸": {
+            "default": "5寸拍立得"
+        },
+        "4寸": {
+            "default": "6寸拍立得"
+        },
+        "四寸": {
+            "default": "6寸拍立得"
+        },
+        "5寸": {
+            "全景": "5寸全景",
+            "拍立得": "5寸拍立得",
+            "default": "5寸拍立得"
+        },
+        "五寸": {
+            "全景": "5寸全景",
+            "拍立得": "5寸拍立得",
+            "default": "5寸拍立得"
+        },
+        "6寸": {
+            "全景": "6寸全景",
+            "拍立得": "6寸拍立得",
+            "default": "6寸拍立得"
+        },
+        "六寸": {
+            "全景": "6寸全景",
+            "拍立得": "6寸拍立得",
+            "default": "6寸拍立得"
+        }
+    }
+}
